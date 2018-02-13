@@ -4,7 +4,8 @@
   "description": "",
   "main": "dist/index.js",
   "bin": {
-    "brain-games": "dist/bin/brain-games.js"
+    "brain-games": "dist/bin/brain-games.js",
+    "brain-even": "dist/bin/brain-even.js"
   },
   "files": [
     "dist"
@@ -16,7 +17,7 @@
     "prepublishOnly": "npm run build",
     "eslint": "eslint"
   },
-  "author": "",
+  "author": "Albert Martirosyan",
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "*",

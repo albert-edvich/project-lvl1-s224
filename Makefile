@@ -1,5 +1,3 @@
-#Makefile
-
 install:
 	npm install
 
@@ -11,3 +9,6 @@ build:
 
 publish:
 	npm publish
+
+lint:
+	npm run eslint .

@@ -2,4 +2,4 @@
 
 import gameStart from '..';
 
-gameStart('brain-even');
+gameStart('brain-calc');

@@ -1,12 +1,22 @@
 import readlineSync from 'readline-sync';
+import { car } from 'hexlet-pairs';
+import gamesFlow from './gamesFlow';
+import gamesList from './gamesList';
 
-export default () => {
-  console.log('Answer "yes" if number is even. Otherwise answer "no".');
+export default (gameName) => {
+  console.log('Welcome to the Brain Games!');
+  console.log();
+
+  const getGameTask =
+    gameName === undefined ? 'No game has been selected.' : car(gamesList(gameName));
+  console.log(getGameTask);
   console.log();
 
   const userName = readlineSync.question('May I have your name? ');
 
-  console.log(`Hello, ${userName}!`);
+  const showUserName = `Hello, ${userName}!`;
+  console.log(showUserName);
   console.log();
-  return userName;
+
+  gamesFlow(gameName, userName);
 };

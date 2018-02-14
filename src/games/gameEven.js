@@ -1,10 +1,11 @@
 import { cons } from 'hexlet-pairs';
+import random from '../random';
 
 export default () => {
   const gameTask = 'Answer "yes" if number is even. Otherwise answer "no".';
 
-  const randomNum = (min, max) => Math.floor(Math.random() * (max - min)) + min;
-  const gameQuestion = randomNum(1, 100);
+  const randomNum = random();
+  const gameQuestion = randomNum;
 
   const isEven = n => n % 2 === 0;
 

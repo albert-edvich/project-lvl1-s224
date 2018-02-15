@@ -14,13 +14,13 @@ export const gcd = (a, b) => {
 };
 
 export const balancer = (n) => {
-  const iter = (acc, sumOfDigits, numOfDigits) => {
+  const iter = (balancedStr, sumOfDigits, numOfDigits) => {
     if (numOfDigits === 0) {
-      return acc;
+      return balancedStr;
     }
     const newNum = (sumOfDigits - (sumOfDigits % numOfDigits)) / numOfDigits;
 
-    return iter(acc + newNum, sumOfDigits - newNum, numOfDigits - 1);
+    return iter(balancedStr + newNum, sumOfDigits - newNum, numOfDigits - 1);
   };
 
   const sumOfDigits = (index, numAcc) => {

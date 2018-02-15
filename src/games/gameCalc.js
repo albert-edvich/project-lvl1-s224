@@ -1,13 +1,14 @@
 import { cons } from 'hexlet-pairs';
-import random from '../random';
+import { random } from '../mathFunctions';
+import startGameEngine from '..';
 
-export default () => {
-  const gameTask = 'What is the result of the expression?';
+const task = 'What is the result of the expression?';
 
-  const randomNum1 = random();
-  const randomNum2 = random();
+const gameData = () => {
+  const randomNum1 = random(1, 10);
+  const randomNum2 = random(1, 10);
 
-  const randomOperand = Math.floor(Math.random() * (4 - 1)) + 1;
+  const randomOperand = random(1, 3);
   const operand = () => {
     if (randomOperand === 1) {
       return '+';
@@ -17,10 +18,9 @@ export default () => {
     return '*';
   };
 
-  const gameQuestion =
-    `${randomNum1} ${operand()} ${randomNum2}`;
+  const question = `${randomNum1} ${operand()} ${randomNum2}`;
 
-  const answer = () => {
+  const getAnswer = () => {
     if (randomOperand === 1) {
       return randomNum1 + randomNum2;
     } else if (randomOperand === 2) {
@@ -29,9 +29,13 @@ export default () => {
     return randomNum1 * randomNum2;
   };
 
-  const correctAnswer = String(answer());
+  const answer = String(getAnswer());
 
-  const gameData = cons(gameTask, cons(gameQuestion, correctAnswer));
+  const gamePair = cons(question, answer);
 
-  return gameData;
+  return gamePair;
+};
+
+export default () => {
+  startGameEngine(task, gameData);
 };

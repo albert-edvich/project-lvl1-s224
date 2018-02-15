@@ -1,12 +1,14 @@
 import { cons } from 'hexlet-pairs';
-import random from '../random';
+import { random } from '../mathFunctions';
+import startGameEngine from '..';
 
-export default () => {
-  const gameTask = 'Find the greatest common divisor of given numbers.';
+const task = 'Find the greatest common divisor of given numbers.';
 
-  const a = random();
-  const b = random();
-  const gameQuestion = `${a} ${b}`;
+const gameData = () => {
+  const a = random(1, 10);
+  const b = random(1, 10);
+
+  const question = `${a} ${b}`;
 
   const gcd = (num1, num2) => {
     if (num2 === 0) {
@@ -18,9 +20,12 @@ export default () => {
     return gcd(num2, remainder);
   };
 
-  const correctAnswer = String(gcd(a, b));
+  const answer = String(gcd(a, b));
 
-  const gameData = cons(gameTask, cons(gameQuestion, correctAnswer));
+  const gamePair = cons(question, answer);
 
-  return gameData;
+  return gamePair;
+};
+export default () => {
+  startGameEngine(task, gameData);
 };

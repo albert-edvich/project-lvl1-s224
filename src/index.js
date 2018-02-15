@@ -3,6 +3,7 @@ import readlineSync from 'readline-sync';
 
 export default (task, gameData) => {
   console.log('Welcome to the Brain Games!');
+
   const showTask = task === undefined ? '' : task;
   console.log(showTask);
   console.log();

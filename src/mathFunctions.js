@@ -39,3 +39,17 @@ export const balancer = (n) => {
 
   return sumOfDigits(0, 0);
 };
+
+export const isPrime = (n) => {
+  const iter = (div) => {
+    if (n < 2) {
+      return false;
+    } else if (div === n) {
+      return true;
+    } else if (n % div === 0) {
+      return false;
+    }
+    return iter(div + 1);
+  };
+  return iter(2);
+};

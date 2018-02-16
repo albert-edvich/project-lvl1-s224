@@ -1,5 +1,5 @@
 import { cons } from 'hexlet-pairs';
-import { random } from '../mathFunctions';
+import { random } from '../mathLib';
 import startGameEngine from '..';
 
 const task = 'What is the result of the expression?';

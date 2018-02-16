@@ -1,14 +1,14 @@
 import { cons } from 'hexlet-pairs';
-import { random, isPrime } from '../mathFunctions';
+import { random, balance } from '../mathLib';
 import startGameEngine from '..';
 
-const task = 'Is this number prime?';
+const task = 'Balance the given number.';
 
 const gameData = () => {
-  const randomNum = random(1, 100);
+  const randomNum = random(10, 9999);
   const question = randomNum;
 
-  const answer = isPrime(question) ? 'yes' : 'no';
+  const answer = balance(question);
 
   const gamePair = cons(question, answer);
 

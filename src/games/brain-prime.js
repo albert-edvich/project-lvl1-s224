@@ -1,14 +1,14 @@
 import { cons } from 'hexlet-pairs';
-import { random, isEven } from '../mathFunctions';
+import { random, isPrime, answerYesNo } from '../mathLib';
 import startGameEngine from '..';
 
-const task = 'Answer "yes" if number is even. Otherwise answer "no".';
+const task = 'Is this number prime?';
 
 const gameData = () => {
-  const randomNum = random(1, 10);
+  const randomNum = random(1, 100);
   const question = randomNum;
 
-  const answer = isEven(question) ? 'yes' : 'no';
+  const answer = answerYesNo(isPrime);
 
   const gamePair = cons(question, answer);
 

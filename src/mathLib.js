@@ -13,7 +13,7 @@ export const gcd = (a, b) => {
   return gcd(b, remainder);
 };
 
-export const balancer = (n) => {
+export const balance = (n) => {
   const iter = (balancedStr, sumOfDigits, numOfDigits) => {
     if (numOfDigits === 0) {
       return balancedStr;
@@ -53,3 +53,5 @@ export const isPrime = (n) => {
   };
   return iter(2);
 };
+
+export const answerYesNo = fn => (fn ? 'yes' : 'no');

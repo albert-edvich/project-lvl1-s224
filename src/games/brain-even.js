@@ -1,14 +1,14 @@
 import { cons } from 'hexlet-pairs';
-import { random, balancer } from '../mathFunctions';
+import { random, isEven, answerYesNo } from '../mathLib';
 import startGameEngine from '..';
 
-const task = 'Balance the given number.';
+const task = 'Answer "yes" if number is even. Otherwise answer "no".';
 
 const gameData = () => {
-  const randomNum = random(10, 9999);
+  const randomNum = random(1, 10);
   const question = randomNum;
 
-  const answer = balancer(question);
+  const answer = answerYesNo(isEven);
 
   const gamePair = cons(question, answer);
 

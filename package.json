@@ -1,6 +1,6 @@
 {
   "name": "brain-games-by-b0berts",
-  "version": "1.6.2",
+  "version": "1.6.3",
   "description": "Hexlet Project 1",
   "main": "dist/index.js",
   "bin": {
@@ -22,6 +22,7 @@
     "prepublishOnly": "npm run build",
     "eslint": "eslint"
   },
+  "repository": "github:albert-edvich/project-lvl1-s224",
   "author": "Albert Martirosyan",
   "license": "ISC",
   "devDependencies": {

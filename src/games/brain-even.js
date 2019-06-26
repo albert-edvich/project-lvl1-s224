@@ -8,7 +8,7 @@ const gameData = () => {
   const randomNum = random(1, 10);
   const question = randomNum;
 
-  const answer = answerYesNo(isEven);
+  const answer = answerYesNo(isEven(question));
 
   const gamePair = cons(question, answer);
 

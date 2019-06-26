@@ -41,14 +41,11 @@ export const balance = (n) => {
 
 export const isPrime = (n) => {
   const iter = (div) => {
-    if (n < 2) {
+    if (n < 2 || n % div === 0) {
       return false;
     }
     if (div === n) {
       return true;
-    }
-    if (n % div === 0) {
-      return false;
     }
     return iter(div + 1);
   };

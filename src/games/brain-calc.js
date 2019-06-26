@@ -10,13 +10,14 @@ const gameData = () => {
 
   const randomOperand = random(1, 3);
   const operand = () => {
-    if (randomOperand === 1) {
-      return '+';
+    switch (true) {
+      case randomOperand === 1:
+        return '+';
+      case randomOperand === 2:
+        return '-';
+      default:
+        return '*';
     }
-    if (randomOperand === 2) {
-      return '-';
-    }
-    return '*';
   };
 
   const question = `${randomNum1} ${operand()} ${randomNum2}`;

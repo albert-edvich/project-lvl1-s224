@@ -1,6 +1,6 @@
 {
   "name": "brain-games-by-b0berts",
-  "version": "1.6.5",
+  "version": "1.6.6",
   "description": "Hexlet Project 1",
   "main": "dist/index.js",
   "bin": {

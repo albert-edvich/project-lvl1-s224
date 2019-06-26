@@ -12,4 +12,4 @@ publish:
 	npm publish
 
 lint:
-	npm eslint .
+	npm run eslint .

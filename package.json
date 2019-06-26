@@ -27,16 +27,16 @@
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "*",
-    "babel-core": "*",
-    "babel-preset-env": "*",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "*",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-stage-0": "*",
     "eslint": "*",
     "eslint-config-airbnb-base": "*",
-    "eslint-plugin-import": "*",
-    "babel-eslint": "*"
+    "eslint-plugin-import": "*"
   },
   "dependencies": {
-    "hexlet-pairs": "^1.0.5",
+    "hexlet-pairs": "^1.0.8",
     "readline-sync": "^1.4.8"
   }
 }

@@ -1,5 +1,4 @@
-export const random = (min, max) =>
-  Math.floor(Math.random() * ((max - min) + 1)) + min;
+export const random = (min, max) => Math.floor(Math.random() * ((max - min) + 1)) + min;
 
 export const isEven = n => n % 2 === 0;
 
@@ -44,9 +43,11 @@ export const isPrime = (n) => {
   const iter = (div) => {
     if (n < 2) {
       return false;
-    } else if (div === n) {
+    }
+    if (div === n) {
       return true;
-    } else if (n % div === 0) {
+    }
+    if (n % div === 0) {
       return false;
     }
     return iter(div + 1);

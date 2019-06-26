@@ -15,7 +15,8 @@ const gameData = () => {
   const iter = (index, seq) => {
     if (index > term) {
       return seq;
-    } else if (index === emptyTerm) {
+    }
+    if (index === emptyTerm) {
       return iter(index + 1, `${seq} ..`);
     }
 

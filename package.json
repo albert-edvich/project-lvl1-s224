@@ -26,14 +26,14 @@
   "author": "Albert Martirosyan",
   "license": "ISC",
   "devDependencies": {
-    "babel-cli": "*",
-    "babel-core": "^6.26.3",
-    "babel-eslint": "*",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-stage-0": "*",
-    "eslint": "*",
-    "eslint-config-airbnb-base": "*",
-    "eslint-plugin-import": "*"
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel-eslint": "^10.0.2",
+    "eslint": "^6.0.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.18.0"
   },
   "dependencies": {
     "hexlet-pairs": "^1.0.8",

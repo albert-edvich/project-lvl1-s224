@@ -12,7 +12,8 @@ const gameData = () => {
   const operand = () => {
     if (randomOperand === 1) {
       return '+';
-    } else if (randomOperand === 2) {
+    }
+    if (randomOperand === 2) {
       return '-';
     }
     return '*';
@@ -23,7 +24,8 @@ const gameData = () => {
   const getAnswer = () => {
     if (randomOperand === 1) {
       return randomNum1 + randomNum2;
-    } else if (randomOperand === 2) {
+    }
+    if (randomOperand === 2) {
       return randomNum1 - randomNum2;
     }
     return randomNum1 * randomNum2;
